@@ -2,7 +2,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
+  title: 'InfinityOS',
   tagline: 'The official documentation for InfinityOS',
   url: 'https://infinityos-dev.github.io',
   baseUrl: '/infinityos-dev.github.io/',
@@ -36,7 +36,7 @@ const config = {
             xslt: true,
           },
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/infinityos-dev/infinityos-dev.github.io/tree/main/',
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -51,24 +51,26 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/docusaurus-social-card.jpg',  // Replace with project's social card when we get one
       navbar: {
-        title: 'My Site',
+        title: 'InfinityOS',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'InfinityOS logo',
+          src: 'img/logo_bold.svg',
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
+            to:'/docs',
+            label: 'Docs',
+            position: 'left'
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            to:'/blog',
+            label: 'Blog',
+            position: 'left'
+          },
+          {
+            href: 'https://github.com/infinityos-dev/InfinityOS',
             label: 'GitHub',
             position: 'right',
           },
@@ -117,7 +119,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} InfinityOS Dev, Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,

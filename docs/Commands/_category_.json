@@ -1,0 +1,8 @@
+{
+    "label": "Terminal Commands",
+    "position": 2,
+    "link": {
+      "type": "generated-index",
+      "description": "A list of all terminal commands."
+    }
+  }
