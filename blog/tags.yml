@@ -1,19 +1,49 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+general:
+  label: General
+  permalink: /general
+  description: General tag description
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+commandline:
+  label: Command Line
+  permalink: /commandline
+  description: Command Line tag description
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+kernel:
+  label: Kernel
+  permalink: /kernel
+  description: Kernel tag description
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+virtualization:
+  label: Virtualization
+  permalink: /virtualization
+  description: Virtualization tag description
+
+containerization:
+  label: Containerization
+  permalink: /containerization
+  description: Containerization tag description
+
+sysadmin:
+  label: System Administration
+  permalink: /sysadmin
+  description: System Administration tag description
+
+networking:
+  label: Networking
+  permalink: /networking
+  description: Networking tag description
+
+devops:
+  label: DevOps
+  permalink: /devops
+  description: DevOps tag description
+
+automation:
+  label: Automation
+  permalink: /automation
+  description: Automation tag description
+
+security:
+  label: Security
+  permalink: /security
+  description: Security tag description
