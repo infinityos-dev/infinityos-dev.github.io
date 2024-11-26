@@ -5,7 +5,7 @@ const config = {
   title: 'InfinityOS',
   tagline: 'The official documentation for InfinityOS',
   url: 'https://infinityos-dev.github.io',
-  baseUrl: '/infinityos-dev.github.io/',
+  baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
