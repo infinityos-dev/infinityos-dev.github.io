@@ -6,7 +6,7 @@ const config = {
   tagline: 'The official documentation for InfinityOS',
   url: 'https://infinityos-dev.github.io',
   baseUrl: '/infinityos-dev.github.io/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'infinityos-dev',
@@ -17,7 +17,6 @@ const config = {
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
-    onBrokenLinks: 'ignore', // THIS IS STUPID AND IS VIKTORS FAULT
   },
 
   presets: [
