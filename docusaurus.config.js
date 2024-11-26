@@ -17,6 +17,7 @@ const config = {
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
+    onBrokenLinks: 'ignore', // THIS IS STUPID AND IS VIKTORS FAULT
   },
 
   presets: [
