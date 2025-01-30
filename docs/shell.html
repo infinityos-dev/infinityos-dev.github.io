@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfinityOS Shell Commands</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+    <h1>InfinityOS Shell</h1>
+
+    <div class="important">
+        <p><strong>IMPORTANT:</strong> InfinityOS is still in very early development, is being developed on and off. Because of that not every command is currently available.</p>
+    </div>
+
+    <section>
+        <h2>Commands</h2>
+        <p>
+            The main commands have a long name, a one-letter alias, and may
+            have additional common aliases.
+        </p>
+
+        <h3>Alias</h3>
+        <p>Alias commands:</p>
+        <pre>
+<code>alias a alias
+a d delete
+alias rm delete</code></pre>
+
+        <h3>Delete</h3>
+        <p>Delete file:</p>
+        <pre>
+<code>d /usr/v/a.txt
+del /usr/v/a.txt
+delete /usr/v/a.txt
+rm /usr/v/a.txt</code></pre>
+
+        <h3>Copy</h3>
+        <p>Copy file:</p>
+        <pre>
+<code>c /usr/v/a.txt /usr/v/b.txt
+cp /usr/v/a.txt /usr/v/b.txt
+copy /usr/v/a.txt /usr/v/b.txt</code></pre>
+
+        <h3>Move</h3>
+        <p>Move file:</p>
+        <pre>
+<code>m /usr/v/a.txt /usr/v/b.txt
+mv /usr/v/a.txt /usr/v/b.txt
+move /usr/v/a.txt /usr/v/b.txt</code></pre>
+
+        <h3>Print</h3>
+        <p>Print string:</p>
+        <pre>
+<code>p "Hi"
+print "Hi"</code></pre>
+
+        <h3>Read</h3>
+        <p>Read file:</p>
+        <pre>
+<code>r /usr/v/a.txt
+read /usr/v/a.txt</code></pre>
+
+        <h3>Write</h3>
+        <p>Write file:</p>
+        <pre>
+<code>w /usr/v/a.txt
+write /usr/v/a.txt</code></pre>
+        <p>Write dir:</p>
+        <pre>
+<code>w /usr/v/ # note the trailing slash
+wd /usr/v
+write-dir /usr/v</code></pre>
+    </section>
+
+    <section>
+        <h2>Combiners</h2>
+        <p>
+            The <code>&</code> and <code>|</code> symbols are used only for
+            combiners so there's no need to double them.
+        </p>
+
+        <h3>And</h3>
+        <pre><code>r /user/v/a.txt & r /user/v/b.txt</code></pre>
+
+        <h3>Or</h3>
+        <pre><code>r /user/v/a.txt | r /user/v/b.txt</code></pre>
+    </section>
+
+    <section>
+        <h2>Pipes</h2>
+        <p>
+            The <code>|</code> symbol from UNIX is replaced by <code>></code>, and <code>></code> is replaced by
+            <code>> w</code>. An additional standard stream <code>stdnil(3)</code> is added to simplify writing to
+            <code>/dev/null</code>.
+        </p>
+
+        <p>
+            Read file A and redirect stdout(1) to stdin(0) of write file B:
+        </p>
+        <pre>
+<code>r /user/v/a.txt > w /user/v/b.txt
+r /user/v/a.txt 1>0 w /user/v/b.txt</code></pre>
+
+        <p>
+            Read file A and redirect stderr(2) to stdin(0) of write file B:
+        </p>
+        <pre>
+<code>r /user/v/a.txt 2> w /user/v/b.txt
+r /user/v/a.txt 2>0 w /user/v/b.txt</code></pre>
+
+        <p>
+            Suppress errors by redirecting stderr(2) to <code>stdnil(3)</code>:
+        </p>
+        <pre><code>r /user/v/a.txt 2>3 w /user/v/b.txt</code></pre>
+
+        <p>
+            Redirect stdout(1) to stdin(0) and stderr(2) to <code>stdnil(3)</code>:
+        </p>
+        <pre>
+<code>r /user/v/a.txt > 2>3 w /user/v/b.txt
+r /user/v/a.txt 1>0 2>3 w /user/v/b.txt</code></pre>
+    </section>
+</body>
+
+</html>
