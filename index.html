@@ -9,6 +9,17 @@
 </head>
 
 <body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#building">Building</a></li>
+            <li><a href="#running">Running</a></li>
+            <li><a href="#testing">Testing</a></li>
+            <li><a href="https://github.com/infinityos-dev/core">GitHub</a></li>
+        </ul>
+    </nav>
+
     <h1><strong>InfinityOS</strong></h1>
     <div class="important">
         <p><strong>IMPORTANT:</strong> InfinityOS is still in very early development, is being developed on and off, and is currently not ready for normal usage.</p>
@@ -17,7 +28,7 @@
     
     <p>This operating system is being openly developed on <a href="https://github.com/infinityos-dev/core">GitHub</a>. If you have any problems or questions, please open an issue there.</p>
 
-    <h2><strong>Features</strong></h2>
+    <h2 id="features"><strong>Features</strong></h2>
     <ul>
         <li><strong>Rust-Powered</strong>: Fully written in Rust, focusing on safety, performance, and modern systems programming practices.</li>
         <li><strong>Bare Metal Development</strong>: Runs directly on hardware, without relying on an existing operating system.</li>
@@ -25,7 +36,7 @@
         <li><strong>Modular Design</strong>: Designed for extensibility and future feature development.</li>
     </ul>
     
-    <h2>Building</h2>
+    <h2 id="building">Building</h2>
     <p>This project requires a nightly version of Rust because it uses some unstable features. At least nightly <em>2020-07-15</em> is required for building. You might need to run <code>rustup update nightly --force</code> to update to the latest nightly even if some components such as <code>rustfmt</code> are missing it.</p>
     <p>You can build the project by running:</p>
     <pre><code>cargo build</code></pre>
@@ -36,7 +47,7 @@
     <p>This creates a bootable disk image in the <code>target/x86_64-infinity_os/debug</code> directory.</p>
     <p>Please file an issue if you have any problems.</p>
     
-    <h2>Running</h2>
+    <h2 id="running">Running</h2>
     <p>You can run the disk image in <a href="https://www.qemu.org/">QEMU</a> through:</p>
     <pre><code>cargo run</code></pre>
     <p><a href="https://www.qemu.org/">QEMU</a> and the <a href="https://github.com/rust-osdev/bootimage">bootimage</a> tool need to be installed for this.</p>
@@ -44,13 +55,16 @@
     <pre><code>dd if=target/x86_64-infinity_os/debug/bootimage-infinity_os.bin of=/dev/sdX && sync</code></pre>
     <p>Where <code>sdX</code> is the device name of your USB stick. <strong>Be careful</strong> to choose the correct device name, because everything on that device is overwritten.</p>
     
-    <h2>Testing</h2>
+    <h2 id="testing">Testing</h2>
     <div class="important">
         <p><strong>NOTE:</strong> You will need QEMU to test properly</p>
     </div>
     <p>To run the unit and integration tests, execute <code>cargo test</code>.</p>
 
     <footer><p><a href="/">Home</a></footer>
+
+    <button id="theme-toggle" class="theme-toggle">🌞</button>
+    <script src="./scripts/theme_toggle.js"></script>
 </body>
 
 </html>
