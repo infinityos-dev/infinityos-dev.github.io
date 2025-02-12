@@ -127,6 +127,8 @@ h3::before {
     background: var(--bg-color);
     padding: 10px;
     text-align: center;
+    z-index: 1000;
+    position: fixed;
 }
 
 .navbar ul {
