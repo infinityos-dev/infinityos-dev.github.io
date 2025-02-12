@@ -52,7 +52,7 @@
     <pre><code>cargo run</code></pre>
     <p><a href="https://www.qemu.org/">QEMU</a> and the <a href="https://github.com/rust-osdev/bootimage">bootimage</a> tool need to be installed for this.</p>
     <p>You can also write the image to a USB stick for booting it on a real machine. On Linux, the command for this is:</p>
-    <pre><code>dd if=target/x86_64-infinity_os/debug/bootimage-infinity_os.bin of=/dev/sdX && sync</code></pre>
+    <pre><code>dd if=target/x86_64-infinity_os/debug/bootimage-infinity_os.bin \ <br>of=/dev/sdX && sync</code></pre>
     <p>Where <code>sdX</code> is the device name of your USB stick. <strong>Be careful</strong> to choose the correct device name, because everything on that device is overwritten.</p>
     
     <h2 id="testing">Testing</h2>
