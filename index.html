@@ -13,10 +13,11 @@
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#features">Features</a></li>
+            <li><a href="#download">Download</a></li>
             <li><a href="#building">Building</a></li>
             <li><a href="#running">Running</a></li>
             <li><a href="#testing">Testing</a></li>
-            <li><a href="https://github.com/infinityos-dev/core">GitHub</a></li>
+            <li><a href="https://github.com/infinityos-dev/core" target="_blank">GitHub</a></li>
         </ul>
     </nav>
 
@@ -26,7 +27,7 @@
     </div>
     <p>Welcome to <strong>InfinityOS</strong>, an experimental operating system written in Rust. This project explores the boundaries of Rust in systems programming and serves as a platform for learning and innovation.</p>
     
-    <p>This operating system is being openly developed on <a href="https://github.com/infinityos-dev/core">GitHub</a>. If you have any problems or questions, please open an issue there.</p>
+    <p>This operating system is being openly developed on <a href="https://github.com/infinityos-dev/core" target="_blank">GitHub</a>. If you have any problems or questions, please open an issue there.</p>
 
     <h2 id="features"><strong>Features</strong></h2>
     <ul>
@@ -35,12 +36,15 @@
         <li><strong>Learning-Oriented</strong>: Aimed at understanding OS architecture, low-level programming, and Rust's capabilities in systems development.</li>
         <li><strong>Modular Design</strong>: Designed for extensibility and future feature development.</li>
     </ul>
+
+    <h2 id="download">Download</h2>
+    <p>You can download the required files for building from the <a href="https://github.com/infinityos-dev/core" target="_blank">GitHub repository.</a></p>
     
     <h2 id="building">Building</h2>
     <p>This project requires a nightly version of Rust because it uses some unstable features. At least nightly <em>2020-07-15</em> is required for building. You might need to run <code>rustup update nightly --force</code> to update to the latest nightly even if some components such as <code>rustfmt</code> are missing it.</p>
     <p>You can build the project by running:</p>
     <pre><code>cargo build</code></pre>
-    <p>To create a bootable disk image from the compiled kernel, you need to install the <a href="https://github.com/rust-osdev/bootimage">bootimage</a> tool:</p>
+    <p>To create a bootable disk image from the compiled kernel, you need to install the <a href="https://github.com/rust-osdev/bootimage" target="_blank">bootimage</a> tool:</p>
     <pre><code>cargo install bootimage</code></pre>
     <p>After installing, you can create the bootable disk image by running:</p>
     <pre><code>cargo bootimage</code></pre>
@@ -48,9 +52,9 @@
     <p>Please file an issue if you have any problems.</p>
     
     <h2 id="running">Running</h2>
-    <p>You can run the disk image in <a href="https://www.qemu.org/">QEMU</a> through:</p>
+    <p>You can run the disk image in <a href="https://www.qemu.org/" target="_blank">QEMU</a> through:</p>
     <pre><code>cargo run</code></pre>
-    <p><a href="https://www.qemu.org/">QEMU</a> and the <a href="https://github.com/rust-osdev/bootimage">bootimage</a> tool need to be installed for this.</p>
+    <p><a href="https://www.qemu.org/" target="_blank">QEMU</a> and the <a href="https://github.com/rust-osdev/bootimage" target="_blank">bootimage</a> tool need to be installed for this.</p>
     <p>You can also write the image to a USB stick for booting it on a real machine. On Linux, the command for this is:</p>
     <pre><code>dd if=target/x86_64-infinity_os/debug/bootimage-infinity_os.bin \ <br>of=/dev/sdX && sync</code></pre>
     <p>Where <code>sdX</code> is the device name of your USB stick. <strong>Be careful</strong> to choose the correct device name, because everything on that device is overwritten.</p>
