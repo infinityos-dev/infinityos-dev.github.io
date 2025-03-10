@@ -130,6 +130,12 @@ h3::before {
     z-index: 1000;
     position: fixed;
 }
+:target::before {
+    content: "";
+    display: block;
+    height: 100px; /* Adjust the height to match the top bar or desired offset */
+    margin-top: -100px; /* This creates the space before the title */
+}
 
 .navbar ul {
     list-style-type: none;
@@ -149,4 +155,7 @@ h3::before {
 
 .navbar ul li a:hover {
     color: var(--hover-color);
+}
+.article {
+    margin-top: 100px;
 }
